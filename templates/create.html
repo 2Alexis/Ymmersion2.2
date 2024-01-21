@@ -10,7 +10,7 @@
 
 <body>
     <div class ="page">
-    <h1>Création d'un nouvel aventurier</h1>
+    <h1>CREATION D'UN NOUVEL AVENTURIER</h1>
     <div class = "form">
     <form action="/create" method="post">
 
@@ -19,10 +19,10 @@
         <input type="text" name="nom" required><br>
 </div>
 <div class = "classes">
-        <label for="classe">Classe:</label>
+        <label for="classe">Classes :</label>
         <label for="guerrier" class="custom-radio">
             <input type="radio" id="guerrier" name="classe" value="guerrier" required>
-            <img class = "" src="static/guerrier.jpg" alt="Guerrier"><br>
+            <img class = "" src="static/guerrier.jpg" alt="Guerrier"><br>Guerrier
         </label>
         
         <label for="mage" class="custom-radio">
@@ -31,8 +31,8 @@
         </label>
         
         <label for="archer" class="custom-radio">
-            <input type="radio" id="archer" name="classe" value="archer" required>Archer
-            <img src="static/archer.jpg" alt="Archer">
+            <input type="radio" id="archer" name="classe" value="archer" required>
+            <img src="static/archer.jpg" alt="Archer"><br>Archer
         </label>
         <br>
     </div>
@@ -40,11 +40,13 @@
         <input type="hidden" name="niveau" value="1">
         
         
-       <input type="submit" value="Créer">
+       <input class = "create" type="submit" value="Créer">
     </form>
-    <a href="/">Retour à la page d'accueil</a>
 </div>
 </div>
+    <a class ="home" href="/">Retour à la page d'accueil</a>
+
+
 </body>
 
 </html>

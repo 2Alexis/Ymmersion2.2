@@ -34,41 +34,5 @@
         "attaque": 55,
         "vitesse": 50,
         "avatar": "archer.jpg"
-    },
-    {
-        "id": 2,
-        "nom": "zw",
-        "classe": "guerrier",
-        "niveau": 1,
-        "pointVie": 100,
-        "pointVieMax": 100,
-        "defense": 45,
-        "attaque": 60,
-        "vitesse": 30,
-        "avatar": "guerrier.jpg"
-    },
-    {
-        "id": 3,
-        "nom": "zda",
-        "classe": "mage",
-        "niveau": 1,
-        "pointVie": 80,
-        "pointVieMax": 80,
-        "defense": 40,
-        "attaque": 65,
-        "vitesse": 40,
-        "avatar": "mage.jpg"
-    },
-    {
-        "id": 4,
-        "nom": "zqd",
-        "classe": "guerrier",
-        "niveau": 1,
-        "pointVie": 100,
-        "pointVieMax": 100,
-        "defense": 45,
-        "attaque": 60,
-        "vitesse": 30,
-        "avatar": "guerrier.jpg"
     }
 ]

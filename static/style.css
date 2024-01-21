@@ -134,9 +134,6 @@ input[type="text"] {
 
 
 
-label {
-  
-}
 
 input,
 select {
@@ -147,16 +144,26 @@ select {
 }
 
 input[type="submit"] {
+    width: 250px;
+    height: 35px;
+   margin-left: 28%;
+   border: none;
     background-color: #4CAF50;
     color: white;
-    cursor: pointer;
+    text-decoration: none;
+  
+    text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+input[type="submit"]:hover {
+    display: inline-block;
+    transform: scale(1.05); 
+    background-color: #39873c;
+
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
 
 a{
     display: flex;

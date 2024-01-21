@@ -9,7 +9,6 @@ import (
 	"strconv"
 )
 
-// Aventurier représente la structure d'un aventurier
 type Aventurier struct {
 	ID          int    `json:"id"`
 	Nom         string `json:"nom"`
@@ -37,7 +36,7 @@ func main() {
 	http.HandleFunc("/delete", deleteHandler)
 	http.HandleFunc("/modify", modifyHandler)
 
-	fmt.Println("Server listening on :8080")
+	fmt.Println("Server lancé sur le port :8080")
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -131,7 +130,6 @@ func deleteHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Redirige vers la page de profil après la suppression
 	http.Redirect(w, r, "/profil", http.StatusSeeOther)
 }
 
@@ -151,12 +149,11 @@ func modifyHandler(w http.ResponseWriter, r *http.Request) {
 		if idToModify != -1 {
 			index := findAventurierIndexByID(idToModify)
 			if index != -1 && len(aventuriers) > 0 && index < len(aventuriers) {
-				// Supprime l'aventurier existant
+
 				aventuriers = append(aventuriers[:index], aventuriers[index+1:]...)
 				saveAventuriersToJSON()
 				idCounter -= 1
 
-				// Redirige vers la page de création avec les informations pré-remplies
 				http.Redirect(w, r, "/create", http.StatusSeeOther)
 				return
 
@@ -164,7 +161,6 @@ func modifyHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Redirige vers la page de profil si l'ID n'est pas valide
 	http.Redirect(w, r, "/profil", http.StatusSeeOther)
 }
 
