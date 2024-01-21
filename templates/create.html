@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création d'Aventurier</title>
+    <link rel="stylesheet"  href="static/style.css">
+</head>
+
+<body>
+    <div class ="page">
+    <h1>Création d'un nouvel aventurier</h1>
+    <div class = "form">
+    <form action="/create" method="post">
+
+<div class ="nom">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" required><br>
+</div>
+<div class = "classes">
+        <label for="classe">Classe:</label>
+        <label for="guerrier" class="custom-radio">
+            <input type="radio" id="guerrier" name="classe" value="guerrier" required>
+            <img class = "" src="static/guerrier.jpg" alt="Guerrier"><br>
+        </label>
+        
+        <label for="mage" class="custom-radio">
+            <input type="radio" id="mage" name="classe" value="mage" required>
+            <img src="static/mage.jpg" alt="Mage"><br>Mage
+        </label>
+        
+        <label for="archer" class="custom-radio">
+            <input type="radio" id="archer" name="classe" value="archer" required>Archer
+            <img src="static/archer.jpg" alt="Archer">
+        </label>
+        <br>
+    </div>
+      
+        <input type="hidden" name="niveau" value="1">
+        
+        
+       <input type="submit" value="Créer">
+    </form>
+    <a href="/">Retour à la page d'accueil</a>
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil de l'Aventurier</title>
+    <link rel="stylesheet"  href="static/style.css">
+</head>
+
+<body>
+    <h1>LISTE DES AVENTURIERS</h1>
+    <div class = "page">
+    {{if .}}
+    
+    <ul>
+       
+        {{range .}}
+        <li>
+        
+        
+    <div class ="persos">
+            <img class ="pdp" src="/static/{{.Avatar}}" alt="{{.Classe}} Avatar" >
+        <div class ="info">
+            <h3><strong>{{.Nom}}</strong></h3> - Classe : {{.Classe}}<br> - Niveau : {{.Niveau}}<br>
+            - Points de vie : {{.PointVie}}<br> - Défense : {{.Defense}} <br>- Attaque : {{.Attaque}}<br> - Vitesse : {{.Vitesse}}
+            </div> 
+            <div class = "boutons">
+                <a class ="modif" href="/modify?id={{.ID}}">Modifier</a>
+                <a class = "suppr" href="/delete?id={{.ID}}">Supprimer</a>
+           
+            </div>
+    </li>
+        {{end}}
+    
+    </ul>
+    </div>
+    {{else}}
+    <p>Aucun aventurier trouvé.</p>
+    {{end}}
+</div>
+
+    <a class = "home" href="/">Retour à la page d'accueil</a>
+
+
+</body>
+
+</html>
